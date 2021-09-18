@@ -12,8 +12,9 @@ const ProductScreen = ({match}) => {
             const {data} = await axios.get(`/api/product/${match.params.id}`)
             setProduct(data)
         }
-        fetchProduct()
-    }, [fetchProduct])
+    fetchProduct();
+    });
+
     return (
         <>
             <Link className='btn btn-light my-3' to="/">Back</Link>
